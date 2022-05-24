@@ -1,0 +1,25 @@
+{
+  "name": "cse341project2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdurbin/cse341project2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zdurbin/cse341project2/issues"
+  },
+  "homepage": "https://github.com/zdurbin/cse341project2#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "mongodb": "^4.6.0",
+    "swagger": "^0.7.5"
+  }
+}
