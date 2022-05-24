@@ -36,7 +36,7 @@ const createTask = async (req, res) => {
 const updateTask = async (req, res) => {
   const taskId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
-  const contact = {
+  const task = {
     taskName: req.body.taskName,
     startDate: req.body.startDate,
     dueDate: req.body.dueDate,
@@ -46,8 +46,8 @@ const updateTask = async (req, res) => {
   const response = await mongodb
     .getDb()
     .db()
-    .collection('contacts')
-    .replaceOne({ _id: taskId }, contact);
+    .collection('todo')
+    .replaceOne({ _id: taskId }, task);
   console.log(response);
   if (response.modifiedCount > 0) {
     res.status(204).send();
@@ -58,7 +58,7 @@ const updateTask = async (req, res) => {
 
 const deleteTask = async (req, res) => {
   const userId = new ObjectId(req.params.id);
-  const response = await mongodb.getDb().db().collection('contacts').remove({ _id: userId }, true);
+  const response = await mongodb.getDb().db().collection('todo').remove({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();
