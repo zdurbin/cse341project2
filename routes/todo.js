@@ -7,10 +7,10 @@ router.get('/', todoController.getAll);
 
 router.get('/:id', todoController.getSingle);
 
-router.post('/', todoController.createContact);
+router.post('/', todoController.createTask);
 
-router.put('/:id', todoController.updateContact);
+router.put('/:id', todoController.updateTask);
 
-router.delete('/:id', todoController.deleteContact);
+router.delete('/:id', todoController.deleteTask);
 
 module.exports = router;

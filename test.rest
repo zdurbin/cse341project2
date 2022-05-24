@@ -1,3 +1,14 @@
 // LOCALHOST 
 ### 
 GET http://localhost:3000/todo
+
+### 
+POST http://localhost:3000/todo
+content-type: application/json
+
+{
+        "taskName": "Coding type 2",
+        "startDate": "5/23",
+        "dueDate": "5/25",
+        "taskPriority": "high"
+}
