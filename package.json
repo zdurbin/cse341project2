@@ -11,15 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/zdurbin/cse341project2.git"
   },
-  "author": "",
+  "author": "Zachery Durbin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zdurbin/cse341project2/issues"
   },
-  "homepage": "https://github.com/zdurbin/cse341project2#readme",
-  "dependencies": {
-    "dotenv": "^16.0.1",
-    "mongodb": "^4.6.0",
-    "swagger": "^0.7.5"
-  }
+  "homepage": "https://github.com/zdurbin/cse341project2#readme"
 }
