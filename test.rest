@@ -8,7 +8,7 @@ content-type: application/json
 
 {
         "taskName": "Coding type 2",
-        "startDate": "5/23",
+        "startDate": "",
         "dueDate": "5/25",
         "taskPriority": "high"
 }
