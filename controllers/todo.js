@@ -2,7 +2,7 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
-  const result = await mongodb.getDb().db().collection('todo').find();
+  const result = await mongodb.getDb().db().collection('Todo').find();
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists);
@@ -11,7 +11,7 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   const taskId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db().collection('todo').find({ _id: taskId });
+  const result = await mongodb.getDb().db().collection('Todo').find({ _id: taskId });
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
@@ -25,7 +25,7 @@ const createTask = async (req, res) => {
     dueDate: req.body.dueDate,
     taskPriority: req.body.taskPriority
   };
-  const response = await mongodb.getDb().db().collection('todo').insertOne(task);
+  const response = await mongodb.getDb().db().collection('Todo').insertOne(task);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
@@ -46,7 +46,7 @@ const updateTask = async (req, res) => {
   const response = await mongodb
     .getDb()
     .db()
-    .collection('todo')
+    .collection('Todo')
     .replaceOne({ _id: taskId }, task);
   console.log(response);
   if (response.modifiedCount > 0) {
@@ -58,7 +58,7 @@ const updateTask = async (req, res) => {
 
 const deleteTask = async (req, res) => {
   const userId = new ObjectId(req.params.id);
-  const response = await mongodb.getDb().db().collection('todo').remove({ _id: userId }, true);
+  const response = await mongodb.getDb().db().collection('Todo').remove({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();

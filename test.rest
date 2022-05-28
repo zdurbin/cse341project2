@@ -1,9 +1,9 @@
 // LOCALHOST 
 ### 
-GET http://localhost:3000/todo
+GET http://localhost:3000/Todo
 
 ### 
-POST http://localhost:3000/todo
+POST http://localhost:3000/Todo
 content-type: application/json
 
 {
@@ -12,3 +12,18 @@ content-type: application/json
         "dueDate": "5/25",
         "taskPriority": "high"
 }
+
+### PUT contact 
+PUT http://localhost:3000/Todo/62926479c017bab2501ff5cb HTTP/1.1 
+content-type: application/json
+
+{
+        "taskName": "Coding type 2",
+        "startDate": "5/23",
+        "dueDate": "5/29",
+        "taskPriority": "high"
+}
+
+### DELETE contact 
+DELETE http://localhost:3000/Todo/62926479c017bab2501ff5cb HTTP/1.1
+
