@@ -5,10 +5,10 @@
     "description": "My contact API",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341project2.herokuapp.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {
