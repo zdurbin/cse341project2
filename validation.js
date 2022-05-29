@@ -1,4 +1,4 @@
-const { check, validationResult} =require('express-validator');
+const { check, validationResult} = require('express-validator');
 
 exports.taskValidation = [
     check('taskName', 'Task name is required').not().isEmpty(),

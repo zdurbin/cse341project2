@@ -7,8 +7,8 @@ POST http://localhost:3000/Todo
 content-type: application/json
 
 {
-        "taskName": "Coding type 2",
-        "startDate": "",
+        "taskName": "please work",
+        "startDate": "5/25",
         "dueDate": "5/25",
         "taskPriority": "high"
 }
