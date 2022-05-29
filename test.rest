@@ -7,7 +7,7 @@ POST http://localhost:3000/Todo
 content-type: application/json
 
 {
-        "taskName": "please work",
+        "taskName": "",
         "startDate": "5/25",
         "dueDate": "5/25",
         "taskPriority": "high"
@@ -19,11 +19,11 @@ content-type: application/json
 
 {
         "taskName": "Coding type 2",
-        "startDate": "5/23",
+        "startDate": "5/24",
         "dueDate": "5/29",
         "taskPriority": "high"
 }
 
 ### DELETE contact 
-DELETE http://localhost:3000/Todo/6292d45e8666eefedb142676 HTTP/1.1
+DELETE http://localhost:3000/Todo/6292f4f00537cb6182d222a7 HTTP/1.1
 

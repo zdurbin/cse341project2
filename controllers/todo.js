@@ -37,7 +37,6 @@ const createTask = async  (req, res) => {
   }
 };
 
-
 const updateTask = async (req, res) => {
   const taskId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
