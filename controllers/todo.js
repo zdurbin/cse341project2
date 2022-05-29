@@ -1,5 +1,7 @@
 const mongodb = require('../db/connect');
+const { connect } = require('../routes');
 const ObjectId = require('mongodb').ObjectId;
+const {taskValidation, results} = require('./validation');
 
 const getAll = async (req, res) => {
   const result = await mongodb.getDb().db().collection('Todo').find();
@@ -18,19 +20,36 @@ const getSingle = async (req, res) => {
   });
 };
 
-const createTask = async (req, res) => {
+const createTask = async  (req, res) => {
   const task = {
     taskName: req.body.taskName,
     startDate: req.body.startDate,
     dueDate: req.body.dueDate,
     taskPriority: req.body.taskPriority
   };
+
   const response = await mongodb.getDb().db().collection('Todo').insertOne(task);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
     res.status(500).json(response.error || 'Some error occurred while entering the task.');
   }
+
+  const _result = results(req);
+  if (!_result.isEmpty()) {
+    return res.status(400).json({ errors: _result.array()})
+  };
+
+  connect.getcollection().insertOne(task)
+    .then(result => {
+      console.log(result);
+      res.status(201).json(`new ObjectId: ${result.insertedId}`);
+    })
+    .catch(error =>{
+      console.log(error);
+      res.status(500).json();
+    })
+  
 };
 
 const updateTask = async (req, res) => {
