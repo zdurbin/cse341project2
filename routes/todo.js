@@ -46,7 +46,7 @@ router.put('/:id', taskValidation, (req, res)=> {
         return res.status(500).json({ errors: _result.array() })
     };
 
-    const response = await mongodb
+    const response = mongodb
     .getDb()
     .db()
     .collection('Todo')
