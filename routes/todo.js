@@ -1,12 +1,9 @@
 const express = require('express');
-const { requiresAuth } = require('express-openid-connect');
 const { append } = require('express/lib/response');
 const router = express.Router();
 
 const todoController = require('../controllers/todo');
 const { taskValidation, results } = require('./validation');
-
-
 
 router.get('/', todoController.getAll);
 

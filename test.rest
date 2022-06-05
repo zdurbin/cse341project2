@@ -27,3 +27,42 @@ content-type: application/json
 ### DELETE contact 
 DELETE http://localhost:3000/Todo/6292f4f00537cb6182d222a7 HTTP/1.1
 
+// LOCALHOST 
+### 
+GET http://localhost:3000/User
+
+### 
+POST http://localhost:3000/User
+content-type: application/json
+
+{
+        "userFirstName": "Sarah",
+        "userLastName": "Durbin",
+        "userEmail": "etdurbin@yahoo.com",
+        "userBirthdate": "07/29/1980",
+        "userPosition": "CFO",
+        "userProfilePicture": "Heres my picture",
+        "userEmploymentStatus": "Full Time",
+        "userSalary": "15.00/hr",
+        "userTodoPromissions": "Full Promissions"
+}
+
+### PUT contact 
+PUT http://localhost:3000/User/629c2a8928d5ab6fd3dcf12a HTTP/1.1 
+content-type: application/json
+
+{
+        "userFirstName": "Zachery",
+        "userLastName": "Durbin",
+        "userEmail": "alphawolf9372@yahoo.com",
+        "userBirthdate": "09/27/1981",
+        "userPosition": "Owner",
+        "userProfilePicture": "Heres my picture",
+        "userEmploymentStatus": "Full Time",
+        "userSalary": "15.00/hr",
+        "userTodoPromissions": "Full Promissions"
+}
+
+### DELETE contact 
+DELETE http://localhost:3000/User/6292f4f00537cb6182d222a7 HTTP/1.1
+

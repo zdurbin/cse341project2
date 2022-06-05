@@ -1,0 +1,14 @@
+{
+    "User": {
+        "userFirstName": "Zachery",
+        "userLastName": "Durbin",
+        "userEmail": "alphawolf9372@yahoo.com",
+        "userBirthdate": "09/27/1981",
+        "userPosition": "Owner",
+        "userProfilePicture": "Heres my picture",
+        "userEmploymentStatus": "Full Time",
+        "userSalary": "15.00/hr",
+        "userTodoPromissions": "Full Promissions"
+    }
+
+}
