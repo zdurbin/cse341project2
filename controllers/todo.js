@@ -2,7 +2,6 @@ const res = require('express/lib/response');
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-
 const getAll = async (req, res) => {
   const result = await mongodb.getDb().db().collection('Todo').find();
   result.toArray().then((lists) => {

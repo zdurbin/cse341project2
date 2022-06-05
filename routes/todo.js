@@ -6,9 +6,7 @@ const router = express.Router();
 const todoController = require('../controllers/todo');
 const { taskValidation, results } = require('./validation');
 
-router.get('/profile', requiresAuth(), (req, res) =>{
-  res.send(json.strignify(req.oidc.user));
-});
+
 
 router.get('/', todoController.getAll);
 
