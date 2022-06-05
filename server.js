@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./db/connect');
-//const createError = require('http-errors');
 const cors = require('cors');
 
 const port = process.env.PORT || 3000;
