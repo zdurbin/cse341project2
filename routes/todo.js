@@ -1,4 +1,6 @@
 const express = require('express');
+const { requiresAuth } = require('express-openid-connect');
+const { append } = require('express/lib/response');
 const router = express.Router();
 
 const todoController = require('../controllers/todo');
@@ -63,3 +65,7 @@ router.put('/:id', taskValidation, (req, res)=> {
 router.delete('/:id', todoController.deleteTask);
 
 module.exports = router;
+
+router.get('/profile', requiresAuth(), (req, res) =>{
+  res.send(json.strignify(req.oidc.user));
+});
