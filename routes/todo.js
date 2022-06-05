@@ -9,7 +9,6 @@ router.get('/', todoController.getAll);
 
 router.get('/:id', todoController.getSingle);
 
-//router.post('/', todoController.createTask);
 router.post('/', taskValidation, (req, res) => {
     const task = {
       taskName: req.body.taskName,
@@ -33,7 +32,6 @@ router.post('/', taskValidation, (req, res) => {
 
 router.put('/:id', taskValidation, (req, res)=> {
     const taskId = new ObjectId(req.params.id);
-  // be aware of updateOne if you only want to update specific fields
   const task = {
     taskName: req.body.taskName,
     startDate: req.body.startDate,

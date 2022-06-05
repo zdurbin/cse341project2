@@ -32,7 +32,7 @@ const createUser = async  (req, res) => {
     userTodoPromissions: req.body.userTodoPromissions
   };
 
-  const response = await mongodb.getDb().db().collection('User').insertOne(task);
+  const response = await mongodb.getDb().db().collection('User').insertOne(user);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {

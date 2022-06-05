@@ -10,7 +10,7 @@ router.get('/', userController.getAll);
 router.get('/:id', userController.getSingle);
 
 router.post('/', userValidation, (req, res) => {
-    const task = {  
+    const user = {  
         userFirstName: req.body.userFirstName,
         userLastName: req.body.userLastName,
         userEmail: req.body.userEmail,
@@ -26,7 +26,7 @@ router.post('/', userValidation, (req, res) => {
         return res.status(500).json({ errors: _result.array() })
     };
 
-    const response = mongodb.getDb().db().collection('user').insertOne(user);
+    const response = mongodb.getDb().db().collection('User').insertOne(user);
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
@@ -36,8 +36,7 @@ router.post('/', userValidation, (req, res) => {
 
 router.put('/:id', userValidation, (req, res)=> {
     const userId = new ObjectId(req.params.id);
-  // be aware of updateOne if you only want to update specific fields
-  const task = {  
+  const user = {  
     userFirstName: req.body.userFirstName,
     userLastName: req.body.userLastName,
     userEmail: req.body.userEmail,
@@ -57,7 +56,7 @@ router.put('/:id', userValidation, (req, res)=> {
     .getDb()
     .db()
     .collection('User')
-    .replaceOne({ _id: userId }, task);
+    .replaceOne({ _id: userId }, user);
   console.log(response);
   if (response.modifiedCount > 0) {
     res.status(204).send();
@@ -67,6 +66,6 @@ router.put('/:id', userValidation, (req, res)=> {
 
 });
 
-router.delete('/:id', userController.deleteTask);
+router.delete('/:id', userController.deleteUser);
 
 module.exports = router;

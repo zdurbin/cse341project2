@@ -59,7 +59,7 @@ content-type: application/json
         "userPosition": "Owner",
         "userProfilePicture": "Heres my picture",
         "userEmploymentStatus": "Full Time",
-        "userSalary": "15.00/hr",
+        "userSalary": "20.00/hr",
         "userTodoPromissions": "Full Promissions"
 }
 
