@@ -5,7 +5,7 @@
     "description": "My contact API",
     "version": "1.0.0"
   },
-  "host": "https://cse341project2.herokuapp.com",
+  "host": "cse341project2.herokuapp.com",
   "basePath": "/",
   "schemes": [
     "https"
