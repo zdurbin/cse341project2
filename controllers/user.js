@@ -20,7 +20,7 @@ const getSingle = async (req, res) => {
 };
 
 const createUser = async  (req, res) => {
-  const User = {
+  const user = {
     userFirstName: req.body.userFirstName,
     userLastName: req.body.userLastName,
     userEmail: req.body.userEmail,
