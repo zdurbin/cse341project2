@@ -1,6 +1,8 @@
 const express = require('express');
 const { append } = require('express/lib/response');
 const router = express.Router();
+const mongodb = require('../db/connect');
+const ObjectId = require('mongodb').ObjectId;
 
 const todoController = require('../controllers/todo');
 const { taskValidation, results } = require('./validation');
@@ -24,9 +26,9 @@ router.post('/', taskValidation, (req, res) => {
 
     const response = mongodb.getDb().db().collection('Todo').insertOne(task);
     if (response.acknowledged) {
-      res.status(201).json(response);
+      res.status(201).json(response || 'Inserted successfully');
     } else {
-      res.status(500).json(response.error || 'Some error occurred while entering the task.');
+      res.status(500).json(response.error);
     }
   });
 
@@ -52,9 +54,9 @@ router.put('/:id', taskValidation, (req, res)=> {
     .replaceOne({ _id: taskId }, task);
   console.log(response);
   if (response.modifiedCount > 0) {
-    res.status(204).send();
+    res.status(204).send(response.acknowledged);
   } else {
-    res.status(500).json(response.error || 'Some error occurred while updating the task.');
+    res.status(500).json(response.error);
   }
 
 });

@@ -7,25 +7,25 @@ POST http://localhost:3000/Todo
 content-type: application/json
 
 {
-        "taskName": "",
+        "taskName": "new task",
         "startDate": "5/25",
         "dueDate": "5/25",
         "taskPriority": "high"
 }
 
 ### PUT contact 
-PUT http://localhost:3000/Todo/6292d45e8666eefedb142676 HTTP/1.1 
+PUT http://localhost:3000/Todo/62926b2bd9b1fa7c1aeee2b6 HTTP/1.1 
 content-type: application/json
 
 {
         "taskName": "Coding type 2",
         "startDate": "5/24",
         "dueDate": "5/29",
-        "taskPriority": "high"
+        "taskPriority": "low"
 }
 
 ### DELETE contact 
-DELETE http://localhost:3000/Todo/6292f4f00537cb6182d222a7 HTTP/1.1
+DELETE http://localhost:3000/Todo/62ae66f153365ce7add45fa9 HTTP/1.1
 
 // LOCALHOST 
 ### 
