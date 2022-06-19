@@ -54,7 +54,7 @@ router.put('/:id', taskValidation, (req, res)=> {
     .replaceOne({ _id: taskId }, task);
   console.log(response);
   if (response.modifiedCount > 0) {
-    res.status(204).send(response.acknowledged);
+    res.status(201).send(response);
   } else {
     res.status(500).json(response.error);
   }

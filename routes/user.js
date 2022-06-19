@@ -61,7 +61,7 @@ router.put('/:id', userValidation, (req, res)=> {
     .replaceOne({ _id: userId }, user);
   console.log(response);
   if (response.modifiedCount > 0) {
-    res.status(204).send();
+    res.status(201).send();
   } else {
     res.status(500).json(response.error || 'Some error occurred while updating the user.');
   }
