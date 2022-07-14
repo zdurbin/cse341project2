@@ -24,26 +24,26 @@ exports.userValidation = [
 
 exports.results = validationResult;
 
-exports.groupValidation = [
-    check('', '').not().isEmpty(),
-    check('', '').not().isEmpty(),
-    check('', '').not().isEmpty(),
-    check('', '').not().isEmpty(),
-    check('', '').not().isEmpty(),
-    check('', '').not().isEmpty(),
+// exports.groupValidation = [
+//     check('', '').not().isEmpty(),
+//     check('', '').not().isEmpty(),
+//     check('', '').not().isEmpty(),
+//     check('', '').not().isEmpty(),
+//     check('', '').not().isEmpty(),
+//     check('', '').not().isEmpty(),
     
-]
+// ]
 
-exports.results = validationResult;
+// exports.results = validationResult;
 
-exports.companyValidation = [
-    check('', '').not().isEmpty(),
-    check('', '').not().isEmpty(),
-    check('', '').not().isEmpty(),
-    check('', '').not().isEmpty(),
-    check('', '').not().isEmpty(),
-    check('', '').not().isEmpty(),
+// exports.companyValidation = [
+//     check('', '').not().isEmpty(),
+//     check('', '').not().isEmpty(),
+//     check('', '').not().isEmpty(),
+//     check('', '').not().isEmpty(),
+//     check('', '').not().isEmpty(),
+//     check('', '').not().isEmpty(),
 
-]
+// ]
 
-exports.results = validationResult;
+// exports.results = validationResult;
