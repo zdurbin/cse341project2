@@ -339,6 +339,346 @@
           }
         }
       }
+    },
+    "/group/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "priorityLevel": {
+                  "example": "any"
+                },
+                "createdDate": {
+                  "example": "any"
+                },
+                "due": {
+                  "example": "any"
+                },
+                "creator": {
+                  "example": "any"
+                },
+                "responsable": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                },
+                "feedEntry": {
+                  "example": "any"
+                },
+                "comment": {
+                  "example": "any"
+                },
+                "feed": {
+                  "example": "any"
+                },
+                "discription": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/group/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "priorityLevel": {
+                  "example": "any"
+                },
+                "createdDate": {
+                  "example": "any"
+                },
+                "due": {
+                  "example": "any"
+                },
+                "creator": {
+                  "example": "any"
+                },
+                "responsable": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                },
+                "feedEntry": {
+                  "example": "any"
+                },
+                "comment": {
+                  "example": "any"
+                },
+                "feed": {
+                  "example": "any"
+                },
+                "discription": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/company/": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "priorityLevel": {
+                  "example": "any"
+                },
+                "createdDate": {
+                  "example": "any"
+                },
+                "due": {
+                  "example": "any"
+                },
+                "creator": {
+                  "example": "any"
+                },
+                "responsable": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                },
+                "feedEntry": {
+                  "example": "any"
+                },
+                "comment": {
+                  "example": "any"
+                },
+                "feed": {
+                  "example": "any"
+                },
+                "discription": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/company/{id}": {
+      "get": {
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "priorityLevel": {
+                  "example": "any"
+                },
+                "createdDate": {
+                  "example": "any"
+                },
+                "due": {
+                  "example": "any"
+                },
+                "creator": {
+                  "example": "any"
+                },
+                "responsable": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                },
+                "feedEntry": {
+                  "example": "any"
+                },
+                "comment": {
+                  "example": "any"
+                },
+                "feed": {
+                  "example": "any"
+                },
+                "discription": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
     }
   }
 }
