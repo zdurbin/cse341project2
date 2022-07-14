@@ -40,16 +40,37 @@
             "schema": {
               "type": "object",
               "properties": {
-                "taskName": {
+                "name": {
                   "example": "any"
                 },
-                "startDate": {
+                "priorityLevel": {
                   "example": "any"
                 },
-                "dueDate": {
+                "createdDate": {
                   "example": "any"
                 },
-                "taskPriority": {
+                "due": {
+                  "example": "any"
+                },
+                "creator": {
+                  "example": "any"
+                },
+                "responsable": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                },
+                "feedEntry": {
+                  "example": "any"
+                },
+                "comment": {
+                  "example": "any"
+                },
+                "feed": {
+                  "example": "any"
+                },
+                "discription": {
                   "example": "any"
                 }
               }
@@ -101,16 +122,37 @@
             "schema": {
               "type": "object",
               "properties": {
-                "taskName": {
+                "name": {
                   "example": "any"
                 },
-                "startDate": {
+                "priorityLevel": {
                   "example": "any"
                 },
-                "dueDate": {
+                "createdDate": {
                   "example": "any"
                 },
-                "taskPriority": {
+                "due": {
+                  "example": "any"
+                },
+                "creator": {
+                  "example": "any"
+                },
+                "responsable": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                },
+                "feedEntry": {
+                  "example": "any"
+                },
+                "comment": {
+                  "example": "any"
+                },
+                "feed": {
+                  "example": "any"
+                },
+                "discription": {
                   "example": "any"
                 }
               }
@@ -118,8 +160,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
@@ -270,8 +312,8 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Created"
           },
           "500": {
             "description": "Internal Server Error"
