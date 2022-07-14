@@ -13,10 +13,17 @@ router.get('/:id', todoController.getSingle);
 
 router.post('/', taskValidation, (req, res) => {
     const task = {
-      taskName: req.body.taskName,
-      startDate: req.body.startDate,
-      dueDate: req.body.dueDate,
-      taskPriority: req.body.taskPriority
+      name: req.body.name,
+      priorityLevel: req.body.priorityLevel,
+      createdDate: req.body.createdDate,
+      due: req.body.due,
+      creator: req.body.creator,
+      responsable: req.body.responsable,
+      status: req.body.status,
+      feedEntry: req.body.feedEntry,
+      comment: req.body.comment,
+      feed: req.body.feed,
+      discription: req.body.discription
     };
     
     const _result = results(req);
@@ -35,10 +42,17 @@ router.post('/', taskValidation, (req, res) => {
 router.put('/:id', taskValidation, (req, res)=> {
     const taskId = new ObjectId(req.params.id);
   const task = {
-    taskName: req.body.taskName,
-    startDate: req.body.startDate,
-    dueDate: req.body.dueDate,
-    taskPriority: req.body.taskPriority
+    name: req.body.name,
+    priorityLevel: req.body.priorityLevel,
+    createdDate: req.body.createdDate,
+    due: req.body.due,
+    creator: req.body.creator,
+    responsable: req.body.responsable,
+    status: req.body.status,
+    feedEntry: req.body.feedEntry,
+    comment: req.body.comment,
+    feed: req.body.feed,
+    discription: req.body.discription
 
   };
 

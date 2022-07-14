@@ -1,10 +1,16 @@
 {
     "task": {
-        "taskName": "Coding",
-        "startDate": "5/23",
-        "dueDate": "5/25",
-        "taskPriority": "high"
-
+        "Name": "Coding",
+        "priorityLevel":"3",
+        "createdDate": "5/23",
+        "due": "5/25",
+        "creator": "Zachery Durbin",
+        "responsable": "Zachery Durbin",
+        "Status": "Completed",
+        "feedEntry": "",
+        "comment": "This is a comment",
+        "feed": "",
+        "discription": "This task must be completed using JavaScript language"
     }
     
 }
