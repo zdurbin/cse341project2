@@ -25,18 +25,25 @@ content-type: application/json
 
 
 ### PUT contact 
-PUT http://localhost:3000/Todo/62926b2bd9b1fa7c1aeee2b6 HTTP/1.1 
+PUT http://localhost:3000/Todo/62cf840c940f9321f6466b1b 
 content-type: application/json
 
 {
-        "taskName": "Coding type 2",
-        "startDate": "5/24",
-        "dueDate": "5/29",
-        "taskPriority": "low"
+        "Name": "JavaScript coding",
+        "priorityLevel":"1",
+        "createdDate": "5/23",
+        "due": "5/25",
+        "creator": "Zachery Durbin",
+        "responsable": "Zachery Durbin",
+        "Status": "Completed",
+        "feedEntry": "",
+        "comment": "This is a comment",
+        "feed": "",
+        "discription": "This task must be completed using JavaScript language"
 }
 
 ### DELETE contact 
-DELETE http://localhost:3000/Todo/62ae66f153365ce7add45fa9 HTTP/1.1
+DELETE http://localhost:3000/Todo/62cf8f5cb2efa60389e35fc5 HTTP/1.1
 
 // LOCALHOST 
 ### 

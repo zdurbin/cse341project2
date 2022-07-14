@@ -19,45 +19,6 @@ const getSingle = async (req, res) => {
   });
 };
 
-const createTask = async  (req, res) => {
-  const task = {
-    taskName: req.body.taskName,
-    startDate: req.body.startDate,
-    dueDate: req.body.dueDate,
-    taskPriority: req.body.taskPriority
-  };
-
-  const response = await mongodb.getDb().db().collection('Todo').insertOne(task);
-  if (response.acknowledged) {
-    res.status(201).json(response);
-  } else {
-    res.status(500).json(response.error || 'Some error occurred while entering the task.');
-  }
-};
-
-const updateTask = async (req, res) => {
-  const taskId = new ObjectId(req.params.id);
-  // be aware of updateOne if you only want to update specific fields
-  const task = {
-    taskName: req.body.taskName,
-    startDate: req.body.startDate,
-    dueDate: req.body.dueDate,
-    taskPriority: req.body.taskPriority
-
-  };
-  const response = await mongodb
-    .getDb()
-    .db()
-    .collection('Todo')
-    .replaceOne({ _id: taskId }, task);
-  console.log(response);
-  if (response.modifiedCount > 0) {
-    res.status(204).send();
-  } else {
-    res.status(500).json(response.error || 'Some error occurred while updating the updating.');
-  }
-};
-
 const deleteTask = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   const response = await mongodb.getDb().db().collection('Todo').remove({ _id: userId }, true);
@@ -72,7 +33,5 @@ const deleteTask = async (req, res) => {
 module.exports = {
   getAll,
   getSingle,
-  createTask,
-  updateTask,
   deleteTask
 };
